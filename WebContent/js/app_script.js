@@ -1,9 +1,5 @@
 $(document).ready(function(){
-	if($("#myTable").length==1) {$("#myTable").hide();}
-});
-
-$("button").click(function(){
-	
+	//if($("#myTable").length==1) {$("#myTable").hide();}
 	$.getJSON("../RestfulJSONWebService/rest/users/all", function(data){
 		if(data.length>0) {$("#myTable").show();}
 		$("#myTable").find("tr:gt(0)").remove();
@@ -14,3 +10,4 @@ $("button").click(function(){
 		
 	});
 });
+
